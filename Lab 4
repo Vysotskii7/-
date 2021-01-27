@@ -1,0 +1,79 @@
+#include<iostream>
+usingnamespacestd;
+
+intzeroCount(intarr[], intlen);
+voidprintArr(intarr[], intlen);
+
+int main()
+{
+autoinitArrLen = 100;
+autoinitArr = newint[initArrLen];
+
+//заполнение массива
+srand(time(nullptr));
+for (inti = 0; i<initArrLen; i++)
+	initArr[i] = rand();
+
+cout<<"Init values:\n";
+printArr(initArr, initArrLen);
+	//удалениенулей
+autozerosCount = zeroCount(initArr, initArrLen);
+if (zerosCount> 0)
+{
+	cout<<"Finded "<<zerosCount<<" zeros in array. Cleaning"<<"\n";
+	autocleanedArrLen = initArrLen - zerosCount;
+	autocleanedArr = newint[cleanedArrLen];
+	autocleanedArrIdx = 0;
+	for (inti = 0; i<initArrLen; i++)
+	{
+		if (initArr[i] != 0)
+		cleanedArr[cleanedArrIdx++] = initArr[i];
+	}
+	initArr = cleanedArr;
+	initArrLen = cleanedArrLen;
+	}
+	else
+	{
+	cout<<"Not found 0 values in array. Skip cleaning\n";
+	}
+	//вставкаM[I-1]+2
+	for (inti = 0; i<initArrLen; i++)
+	{
+	if (initArr[i] % 2 != 0)
+		continue;
+	cout<<"Find odd value at index "<<i<<"\n";
+	autoinsVal = 2;
+	if (i - 1 < 0) {
+		i--;
+		cout<<"No prevval (out of bound), use 0 instead";
+		}
+	else
+		insVal += initArr[i - 1];
+		cout<<"Insering value "<<insVal<<"\n";
+	automodArrLen = initArrLen + 1;
+	automodArr = newint[modArrLen];
+	//write new arr
+	modArr[i + 1] = insVal;
+	copy(initArr, initArr + i + 1, modArr);
+	copy(initArr+i+1, initArr + initArrLen, modArr+i+2);
+
+	//print
+	cout<<"Result arr\n";
+	printArr(modArr, modArrLen);
+	break;
+	}
+
+}
+
+intzeroCount(intarr[], intlen) {
+auto counter = 0;
+for (size_ti = 0; i<len; i++) {
+if (arr[i] == 0)
+counter++;
+}
+return counter;
+}
+voidprintArr(intarr[], intlen) {
+	for (size_ti = 0; i<len; i++)
+		cout<<arr[i] <<" ";
+	cout<<"\n"; }
