@@ -1,0 +1,11 @@
+#include<iostream>
+intmain()
+{
+autosumm = 0;
+autolessThan = 200;
+for (size_ti = 1; i<lessThan; i+=2) // пропускчётных
+{
+summ += i;
+}
+std::cout<<"Summ of odd positive ints less than "<<lessThan<<": "<<summ<<"\n";
+}
