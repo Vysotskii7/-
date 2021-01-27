@@ -1,0 +1,46 @@
+#include<iostream>
+void task1();
+doublecalculateAsDouble(inta, doubleb);
+floatcalculateAsFloat(inta, floatb);
+void task2();
+int main()
+{
+	task1();
+	std::cout<<"\n\n";
+	task2();
+}
+
+void task1() {
+	auto a = 1000;
+	auto b = 0.0001;
+	std::cout<<"As float\n";
+	calculateAsFloat(a, b);
+	std::cout<<"As double\n";
+	calculateAsDouble(a, b);
+}
+floatcalculateAsFloat(inta, floatb) {
+	autodivident = powf(a + b, 3) - (powf(a, 3) + 3 * powf(a, 2) * b);
+	auto divider = 3 * a * powf(b, 2) + powf(b, 3);
+	auto result = divident / divider;
+	std::cout<<"divident = "<<divident<<"\ndivider = "<< divider <<"\nresult = "<< result <<"\n";
+	return result;
+}
+doublecalculateAsDouble(inta, doubleb) {
+	autodivident = pow(a + b, 3) - (pow(a, 3) + 3 * pow(a, 2) * b);
+	auto divider = a * 3 * pow(b, 2) + pow(b, 3);
+	auto result = divident / divider;
+	std::cout<<"divident = "<<divident<<"\ndivider = "<< divider <<"\nresult = "<< result <<"\n";
+	returnresult;
+}
+//разные результаты из-за особенностей работы float типов 
+void task2() {
+	auto n = 38;
+	auto m = 5;
+	//декримент на 1 и вычитание
+	std::cout<<"(n--)-m = "<< (n-- - m) <<"\n";
+	//декримент на 1 и сравнение
+	std::cout<<"(n--)<m = "<< (n-- < m) <<"\n";
+	//инкримент на 1 и сравнение
+	std::cout<<"(n++)>m = "<< (n++ > m) <<"\n";
+	
+	//true == 1; false == 0;
