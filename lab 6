@@ -1,0 +1,24 @@
+#include<cstdlib>
+#include<cstdio>
+#include<cstring>
+#include<conio.h>
+using namespace std;
+int main(int argc, char *argv[])
+{ 
+    const int size = 255;
+    char *clas = "ay";
+    char str[size],
+        *c = str, 
+        *ch = NULL;
+    gets( str );
+    puts("\n");
+    char *end = str + strlen( str );
+    while( c < end ){
+        c = strtok( c, " " );
+        ch = strpbrk( c, clas );
+        if ( ch == NULL ) puts(c);
+        c += strlen( c ) +1;
+    }
+    getch();
+    return 0;
+}
