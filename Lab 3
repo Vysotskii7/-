@@ -1,0 +1,40 @@
+3 вариант
+#include <cmath>
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+double S(double x, long n)
+
+{
+doubleak  = x;
+double sum = 0;
+for(long k = 0; k < n; k++)
+    {
+sum += ak;
+ak  *= (-1)*x*x/((2*k + 2)*(2*k + 3));
+    }
+return sum;
+}
+
+int main()
+{
+doublexn, xk, dx, s;
+cout<<"xn = ";cin>>xn;
+cout<<"xk = ";cin>>xk;
+cout<<"dx = ";cin>>dx;
+cout<<"|  x  |  Sum  | sin(x)| err, % |\n";
+for(double x = xn; x <= xk; x = x + dx)
+    {
+        s = S(x, 10);
+cout<<setw(5)<<setprecision(3)<<x<<" | "
+<<setw(5)<<setprecision(3)<<s<<" | "
+<<setw(5)<<setprecision(3)<<sin(x)<<" | ";
+if(!sin(x))
+cout<<"sin(x) == 0!";
+else
+cout<<100.0*fabs(sin(x) - s)/sin(x);
+cout<<endl;
+    }
+return 0;
+}
